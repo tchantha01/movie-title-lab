@@ -50,6 +50,8 @@ function deleteMovie(event) {
     event.target.parentNode.remove()
     message.textContent = 'Movie deleted!'
 
+    revealMessage()
+
 
 }
 
@@ -64,10 +66,20 @@ function crossOffMovie(event) {
     }
 
 
-
+revealMessage()
 
 }
 
+
+function revealMessage() {
+    message.classList.remove('hide')
+
+    setTimeout(() => {
+        message.classList.add('hide')
+    }, 1000)
+
+}
+    
 
 
 
